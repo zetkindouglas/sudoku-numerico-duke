@@ -61,10 +61,10 @@ st.markdown("Una app educativa tipo Sudoku en Streamlit que presenta operaciones
 
 ## 🧩 Funcionalidades
 
-- Operaciones y validación automática.
-- Temporizador y puntaje.
-- Botón de "Nueva partida" para rejugar.
-- Accesible desde navegador o móvil.
+st.markdown("""
+- Operaciones y validación automática
+* Sistema de verificación integrado
+""")
 
 ## ⚙️ Instalación
 
