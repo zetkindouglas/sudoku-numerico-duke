@@ -67,10 +67,14 @@ st.markdown("""
 """)
 
 ## ⚙️ Instalación
-st.markdown("```bash\npip install streamlit\n```")
+# Alrededor de la línea 70
+st.header("Instalación y Uso")
+st.markdown("### Clonar el repositorio:")
+st.code("git clone https://github.com/CTU_USUARIO/sudoku-numerico-duke.git", language='bash')
+st.markdown("* Ejecuta este comando en tu terminal")
 
-git clone https://github.com/<TU_USUARIO>/sudoku-numerico-duke.git
-cd sudoku-numerico-duke
-pip install -r requirements.txt
-streamlit run sudoku_app.py
+st.markdown("### Instalar dependencias:")
+st.code("pip install -r requirements.txt", language='bash')
 
+st.markdown("### Ejecutar la aplicación:")
+st.code("streamlit run sudoku_app.py", language='bash')
