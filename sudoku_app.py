@@ -1,6 +1,48 @@
 import streamlit as st
 import random
 import time
+import streamlit as st
+
+# =============================================
+# CONFIGURACIÓN PWA (PROGRESSIVE WEB APP)
+# =============================================
+pwa_html = """
+<link rel="manifest" href="pwa/manifest.json">
+<link rel="icon" href="pwa/icon-192.png">
+<meta name="theme-color" content="#4B0082">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="SudokuMath">
+<link rel="apple-touch-icon" href="pwa/icon-192.png">
+
+<script>
+// Registrar Service Worker
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('pwa/service-worker.js')
+      .then(reg => console.log('Service Worker registrado: ', reg))
+      .catch(err => console.error('Error registrando SW: ', err));
+  });
+}
+
+// Detectar si es móvil para mejor experiencia
+function isMobile() {
+  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+}
+
+// Optimizar interfaz para móviles
+if (isMobile()) {
+  document.body.style.zoom = "80%";
+  document.querySelectorAll('.stButton > button').forEach(btn => {
+    btn.style.padding = "12px 20px";
+    btn.style.fontSize = "16px";
+  });
+}
+</script>
+"""
+
+st.markdown(pwa_html, unsafe_allow_html=True)
+# =============================================
 
 st.set_page_config(page_title="🧠 Sudoku Numérico", layout="centered")
 
