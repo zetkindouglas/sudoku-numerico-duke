@@ -67,8 +67,8 @@ st.markdown("""
 """)
 
 ## ⚙️ Instalación
+st.markdown("```bash\npip install streamlit\n```")
 
-```bash
 git clone https://github.com/<TU_USUARIO>/sudoku-numerico-duke.git
 cd sudoku-numerico-duke
 pip install -r requirements.txt
