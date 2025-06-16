@@ -57,7 +57,7 @@ streamlit
 
 # Sudoku Numérico Duke
 
-Una app educativa tipo Sudoku en Streamlit que presenta operaciones matemáticas universitarias para resolver en una grilla 3×3.
+Una app educativa tipo Sudoku en Streamlit que presenta operaciones matemáticas universitarias para resolver en una grilla 3X3.
 
 ## 🧩 Funcionalidades
 
